@@ -1,0 +1,146 @@
+:root {
+    --star-size: 20px;
+    --star-color: #ccc;
+    --star-background: #fc0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.list-item {
+    margin-bottom: 10px;
+}
+.list-item .top-content {
+    display: flex;
+    background: #333;
+    color: #fff;
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+span.top {
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    display: block;
+    background: #f1f0f8;
+    color: #3a6496;
+    padding: 5px 2px 2px;
+    font-size: 13px;
+    min-width: 26px;
+    /* text-align: center; */
+    border-radius: 0 0 30px;
+}
+span.top_1 {
+    color: #735d00;
+    background: -webkit-gradient(linear,left bottom,left top,from(#ffaf02),color-stop(#ffc502),to(#ffd854)),#ffc502;
+    background: linear-gradient(to top,#ffaf02,#ffc502,#ffd854),#ffc502;
+}
+.img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.img img {
+    max-width: 100%;
+    width: 80px;
+}
+
+.top-info {
+    width: 186px;
+    margin-right: 10px;
+}
+
+span.brand-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rating {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: auto;
+}
+
+.Stars {
+    --percent: calc(var(--rating) / 100 * 100%);
+    display: inline-block;
+    font-size: var(--star-size);
+    font-family: Times;
+    line-height: 1;
+}
+
+.Stars::before {
+    content: '★★★★★';
+    letter-spacing: 0px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+span.top-slogan {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.2;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.top-gift {
+    width: calc(100% - 410px);
+}
+
+.top-gift span {
+    display: block;
+    text-align: center;
+}
+
+span.gift-number {
+    color: #0dcaf0;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.top-action {
+    width: 138px;
+    margin-left: 10px;
+}
+
+.top-action a {
+    display: block;
+    border: 1px solid;
+    text-align: center;
+    text-decoration: none;
+    margin: 1px auto;
+    padding: 3px 0;
+    border-radius: 3px;
+    color: #ccc;
+}
+
+a.link-aff {
+    font-weight: bold;
+    background-image: linear-gradient(to right,#fd8000,#ef6500 98%);
+    color: #fff;
+    border: 0;
+}
+
+a.link-review {
+    color: #ccc;
+    border: 0;
+}
+
+a.link-aff:hover {
+    background: #ffcc00;
+    color: #000;
+    border: 0px;
+}
+
+a.link-review:hover, .short-review:hover {
+    background: #ccc;
+    color: #000;
+    border: 1px solid #ccc;
+}
